@@ -1,0 +1,39 @@
+name: Build and Deploy to docs folder
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build for production
+        run: NODE_ENV=production npm run build
+        
+      - name: Copy build to docs folder
+        run: |
+          rm -rf docs/*
+          cp -r dist/* docs/
+          
+      - name: Commit and push to docs
+        run: |
+          git config --local user.email "149165200+KSAklfszf921@users.noreply.github.com"
+          git config --local user.name "Isak Skogstadt"
+          git add docs/
+          git commit -m "🚀 Auto-deploy build to docs folder for GitHub Pages" || exit 0
+          git push
