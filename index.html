@@ -1,33 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sveriges Förskolor - Hitta Bästa Förskolan Nära Dig</title>
     <meta name="description" content="Upptäck och jämför förskolor i Sverige. Hitta den perfekta förskolan för ditt barn med interaktiv karta, recensioner och detaljerad information." />
-    <meta name="author" content="Lovable" />
+    <meta name="author" content="Sveriges Förskolor" />
     
-    <!-- Google Fonts -->
+    <!-- Instant redirect to working version -->
+    <meta http-equiv="refresh" content="0; url=https://preview--fosko.lovable.app/">
+    <script>
+      // Immediate redirect - bypass any loading delays
+      window.location.replace('https://preview--fosko.lovable.app/');
+    </script>
+    
+    <!-- Google Fonts for loading screen -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Sveriges Förskolor - Hitta Bästa Förskolan" />
-    <meta property="og:description" content="Upptäck och jämför förskolor i Sverige med interaktiv karta och detaljerad information." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <script type="module" crossorigin src="/sweden-preschool-spotlight-new/assets/index-B7fsM-eo.js"></script>
-    <link rel="modulepreload" crossorigin href="/sweden-preschool-spotlight-new/assets/vendor-HHZVgI2a.js">
-    <link rel="modulepreload" crossorigin href="/sweden-preschool-spotlight-new/assets/mapbox-Cr5xdPZU.js">
-    <link rel="modulepreload" crossorigin href="/sweden-preschool-spotlight-new/assets/supabase-Dl7szPKD.js">
-    <link rel="stylesheet" crossorigin href="/sweden-preschool-spotlight-new/assets/index-c69HK57e.css">
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .container {
+        text-align: center;
+        max-width: 500px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .loading {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+      .link {
+        color: white;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="container">
+      <div class="loading">🏫</div>
+      <h1>Sveriges Förskolor</h1>
+      <p>Laddar interaktiv karta...</p>
+      <p>Om du inte omdirigeras automatiskt, <a href="https://preview--fosko.lovable.app/" class="link">klicka här</a></p>
+    </div>
   </body>
 </html>
