@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Build
-        run: npm run build
+      - name: Build for production
+        run: NODE_ENV=production npm run build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
