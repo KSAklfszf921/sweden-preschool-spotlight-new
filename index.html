@@ -7,14 +7,7 @@
     <meta name="description" content="Upptäck och jämför förskolor i Sverige. Hitta den perfekta förskolan för ditt barn med interaktiv karta, recensioner och detaljerad information." />
     <meta name="author" content="Sveriges Förskolor" />
     
-    <!-- Instant redirect to working version -->
-    <meta http-equiv="refresh" content="0; url=https://preview--fosko.lovable.app/">
-    <script>
-      // Immediate redirect - bypass any loading delays
-      window.location.replace('https://preview--fosko.lovable.app/');
-    </script>
-    
-    <!-- Google Fonts for loading screen -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,54 +18,123 @@
         margin: 0;
         padding: 0;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
+        padding: 2rem 0;
       }
       .container {
         text-align: center;
-        max-width: 500px;
-        padding: 2rem;
+        max-width: 600px;
+        padding: 3rem;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       }
-      .loading {
-        font-size: 3rem;
+      .logo {
+        font-size: 4rem;
         margin-bottom: 1rem;
-        animation: spin 2s linear infinite;
+        animation: float 3s ease-in-out infinite;
       }
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
       }
       h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
         font-weight: 700;
+        background: linear-gradient(45deg, #fff, #e0e7ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
-      p {
-        font-size: 1.1rem;
+      .subtitle {
+        font-size: 1.2rem;
         opacity: 0.9;
+        margin-bottom: 2rem;
       }
-      .link {
-        color: white;
-        text-decoration: underline;
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+        text-align: left;
+      }
+      .feature {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .feature-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .feature-title {
         font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .feature-desc {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      .cta {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(45deg, #4f46e5, #7c3aed);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <div class="loading">🏫</div>
+      <div class="logo">🏫</div>
       <h1>Sveriges Förskolor</h1>
-      <p>Laddar interaktiv karta...</p>
-      <p>Om du inte omdirigeras automatiskt, <a href="https://preview--fosko.lovable.app/" class="link">klicka här</a></p>
+      <p class="subtitle">Hitta den perfekta förskolan för ditt barn</p>
+      
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🗺️</div>
+          <div class="feature-title">Interaktiv Karta</div>
+          <div class="feature-desc">Utforska förskolor på en detaljerad karta</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">Jämför Förskolor</div>
+          <div class="feature-desc">Jämför kvalitet, betyg och faciliteter</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⭐</div>
+          <div class="feature-title">Recensioner</div>
+          <div class="feature-desc">Läs äkta recensioner från föräldrar</div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">Mobilvänlig</div>
+          <div class="feature-desc">Fungerar perfekt på alla enheter</div>
+        </div>
+      </div>
+      
+      <a href="#" class="cta" onclick="alert('Kartfunktionen kommer snart!')">Utforska Karta</a>
     </div>
   </body>
 </html>
